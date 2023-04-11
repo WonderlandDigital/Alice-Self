@@ -35,10 +35,15 @@ async def userinfo(ctx, wondermember: discord.User=None):
         await ctx.send(f"**Invalid syntax**\nYou have not specified a user")
     else:
         try:
-        if not wondermember:
+          if not wondermember:
             wondermember = ctx.message.author
             await ctx.send(f"**USER INFO FOR {wondermember}**")
             await ctx.send(f"ID:{wondermember.id}\nDisplay Name:{wondermember.display_name}\nAccount creation date:{wondermember}")
             await ctx.send(f"{wondermember.avatar_url}")
+        except:
+          await ctx.send(f"sorry {ctx.author.mention} I ran into an error.")
+
+
+
 
 alice.run(token)
