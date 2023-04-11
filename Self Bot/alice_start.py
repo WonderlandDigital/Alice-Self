@@ -22,6 +22,7 @@ alice = commands.Bot(command_prefix=prefix, self_bot=True)
 @alice.event
 async def on_ready():
     print(f"Logged into {alice.user.name}")
+    print(f"ID: {alice.user.id}")
 
 @alice.command()
 async def ping(ctx):
