@@ -17,13 +17,13 @@ with open('config/config.json') as f:
     token = config['token']
     prefix = config['prefix']
 
-bot = commands.Bot(command_prefix=prefix, self_bot=True)
+alice = commands.Bot(command_prefix=prefix, self_bot=True)
 
-@bot.event
+@alice.event
 async def on_ready():
     print("Logged in!")
 
-@bot.command()
+@alice.command()
 async def ping(ctx):
     await ctx.send("Pong!")
 
