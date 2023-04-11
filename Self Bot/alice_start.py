@@ -27,19 +27,19 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send("Pong!")
     
-@alice.command()
-async def userinfo(ctx, wondermember: discord.User=None):
-    await ctx.message.delete()
-    print("Command 'userinfo' has been used by " + alice.user.name)
-    if wondermember is None:
-        await ctx.send(f"**Invalid syntax**\nYou have not specified a user")
-    else:
-        try:
-        if not wondermember:
-            wondermember = ctx.message.author
-            await ctx.send(f"**USER INFO FOR {wondermember}**")
-            await ctx.send(f"ID:{wondermember.id}\nDisplay Name:{wondermember.display_name}\nAccount creation date:{ALICEMPTY})
-            await ctx.send(f"{wondermember.avatar_url})
+#@alice.command()
+#async def userinfo(ctx, wondermember: discord.User=None):
+    #await ctx.message.delete()
+    #print("Command 'userinfo' has been used by " + alice.user.name)
+    #if wondermember is None:
+        #await ctx.send(f"**Invalid syntax**\nYou have not specified a user")
+    #else:
+        #try:
+        #if not wondermember:
+            #wondermember = ctx.message.author
+            #await ctx.send(f"**USER INFO FOR {wondermember}**")
+            #await ctx.send(f"ID:{wondermember.id}\nDisplay Name:{wondermember.display_name}\nAccount creation date:{ALICEMPTY})
+            #await ctx.send(f"{wondermember.avatar_url})
 
 
 alice.run(token)
