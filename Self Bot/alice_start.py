@@ -27,4 +27,4 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send("Pong!")
 
-bot.run(token)
+alice.run(token)
