@@ -1,3 +1,3 @@
 @echo off
-python bot.py
+python alice_start.py
 pause
