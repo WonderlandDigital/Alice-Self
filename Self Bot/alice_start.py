@@ -16,6 +16,7 @@ with open('config/config.json') as f:
     config = json.load(f)
     token = config['token']
     prefix = config['prefix']
+    version = config['version']
 
 alice = commands.Bot(command_prefix=prefix, self_bot=True)
 
