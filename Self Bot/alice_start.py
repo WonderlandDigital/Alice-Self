@@ -1080,12 +1080,12 @@ async def avatar(ctx, avamember: discord.Member = None):
 
 
 @death.listen("on_message")
-if ping_detection == True:
   async def pingReplier(message):
     now = datetime.now()
     sleep_seconds = 0.1
     current_time = now.strftime("%H:%M:%S")
     if f'<@{death.user.id}>' in str(message.content):
+      if ping_detection == True:
         log = open('config/Logs/pings.txt', 'a', encoding="utf-8")
         log.write(f"\n{current_time} >>PING DETECTED<<\nMessage: {message.content}\nAuthor: {message.author}\nServer: {message.guild.name}\nChannel Name: {message.channel.name}\nChannel ID: {message.channel.id}\n")
         log.close()
