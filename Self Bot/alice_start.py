@@ -1,24 +1,52 @@
 # -*- coding: utf-8 -*-
-import sys
+import os
+try:
+  import sys
+  import discord, urllib.parse, urllib.request, functools, discord_webhook
+  import re
+  import string, gtts
+  import aiohttp, colorama
+  import asyncio
+  import json, random, string, datetime, time
+  import tracemalloc
+  import requests
+  import pytest_asyncio
+  import ctypes
+  import re
+  import os
+except ImportError:
+  os.system("sys")
+  os.system("discord")
+  os.system("urllib.parse")
+  os.system("urllib.request")
+  os.system("functools")
+  os.system("discord_webhook")
+  os.system("re")
+  os.system("string")
+  os.system("gtts")
+  os.system("aiohttp")
+  os.system("colorama")
+  os.system("asyncio")
+  os.system("json")
+  os.system("random")
+  os.system("string")
+  os.system("datetime")
+  os.system("time")
+  os.system("tracemalloc")
+  os.system("requests")
+  os.system("pytest_asyncio")
+  os.system("ctypes")
+  os.system("re")
+  os.system("os")
+
+
 sys.path.insert(0, 'discord.py-self')
-import discord, urllib.parse, urllib.request, functools, discord_webhook
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from discord.ext import commands
-import re
-import string, gtts
 from gtts import gTTS
-import aiohttp, colorama
 from colorama import Fore
-import asyncio
 from asyncio import sleep
-import json, random, string, datetime, time
 from datetime import datetime
-import re
-import tracemalloc
-import os
-import requests
-import pytest_asyncio
-import ctypes
 from ctypes import windll
 
 #=======================================================================
