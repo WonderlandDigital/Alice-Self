@@ -1558,7 +1558,7 @@ async def gay(ctx, user: discord.Member = None):
   await ctx.message.delete()
   endpoint = "https://api.alexflipnote.dev/filter/gay?image="
   if user is None:
-    avatar = str(ctx.author.avatar_url_as(format="png"))
+    avatar = str(ctx.author.avatar_url(format="png"))
     endpoint += avatar
     try:
       async with aiohttp.ClientSession() as session:
