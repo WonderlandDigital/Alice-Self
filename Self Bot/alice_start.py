@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import sys
-sys.path.insert(0, 'discord.py-self')
 import discord, urllib.parse, urllib.request, functools, discord_webhook
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from discord.ext import commands
