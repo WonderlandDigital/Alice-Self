@@ -1090,8 +1090,8 @@ async def pingReplier(message):
         log.write(f"\n{current_time} >>PING DETECTED<<\nMessage: {message.content}\nAuthor: {message.author}\nServer: {message.guild.name}\nChannel Name: {message.channel.name}\nChannel ID: {message.channel.id}\n")
         log.close()
         async with message.channel.typing():
-            await asyncio.sleep(sleep_seconds)
-        msg = await message.reply(message_to_reply)
+          await asyncio.sleep(sleep_seconds)
+          msg = await message.reply(message_to_reply)
         print(Fore.LIGHTRED_EX + f"\n{current_time}", ">>", Fore.RED + "PING DETECTED", Fore.LIGHTRED_EX + "<<",f"\nAuthor: {message.author}\nChannel: {message.guild.name}\nChannel ID: {message.channel.id}\nMessage: {message.content}\n")
 
 
