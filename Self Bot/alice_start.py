@@ -1,65 +1,24 @@
 # -*- coding: utf-8 -*-
-import os
-try:
-  import sys
-  import discord, urllib.parse, urllib.request, functools, discord_webhook
-  import re
-  import string, gtts
-  import aiohttp, colorama
-  import asyncio
-  import json, random, string, datetime, time
-  import tracemalloc
-  import requests
-  import pytest_asyncio
-  import ctypes
-  import re
-  import os
-except ImportError:
-  os.system("pip install sys")
-  os.system("pip install discord")
-  os.system("pip install urllib.parse")
-  os.system("pip install urllib.request")
-  os.system("pip install functools")
-  os.system("pip install discord_webhook")
-  os.system("pip install re")
-  os.system("pip install string")
-  os.system("pip install gtts")
-  os.system("pip install aiohttp")
-  os.system("pip install colorama")
-  os.system("pip install asyncio")
-  os.system("pip install json")
-  os.system("pip install random")
-  os.system("pip install string")
-  os.system("pip install datetime")
-  os.system("pip install time")
-  os.system("pip install tracemalloc")
-  os.system("pip install requests")
-  os.system("pip install pytest_asyncio")
-  os.system("pip install ctypes")
-  os.system("pip install re")
-  os.system("pip install os")
-  import sys
-  import discord, urllib.parse, urllib.request, functools, discord_webhook
-  import re
-  import string, gtts
-  import aiohttp, colorama
-  import asyncio
-  import json, random, string, datetime, time
-  import tracemalloc
-  import requests
-  import pytest_asyncio
-  import ctypes
-  import re
-  import os
-
-
+import sys
 sys.path.insert(0, 'discord.py-self')
+import discord, urllib.parse, urllib.request, functools, discord_webhook
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from discord.ext import commands
+import re
+import string, gtts
 from gtts import gTTS
+import aiohttp, colorama
 from colorama import Fore
+import asyncio
 from asyncio import sleep
+import json, random, string, datetime, time
 from datetime import datetime
+import re
+import tracemalloc
+import os
+import requests
+import pytest_asyncio
+import ctypes
 from ctypes import windll
 
 #=======================================================================
