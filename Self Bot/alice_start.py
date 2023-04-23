@@ -1080,7 +1080,8 @@ async def avatar(ctx, avamember: discord.Member = None):
 
 
 @death.listen("on_message")
-async def pingReplier(message):
+if ping_detection == True:
+  async def pingReplier(message):
     now = datetime.now()
     sleep_seconds = 0.1
     current_time = now.strftime("%H:%M:%S")
