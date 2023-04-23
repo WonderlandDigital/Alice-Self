@@ -1085,7 +1085,8 @@ async def pingReplier(message):
     sleep_seconds = 0.1
     current_time = now.strftime("%H:%M:%S")
     if f'<@{death.user.id}>' in str(message.content):
-      if ping_detection == True:
+      try:
+        if ping_detection == True:
         log = open('config/Logs/pings.txt', 'a', encoding="utf-8")
         log.write(f"\n{current_time} >>PING DETECTED<<\nMessage: {message.content}\nAuthor: {message.author}\nServer: {message.guild.name}\nChannel Name: {message.channel.name}\nChannel ID: {message.channel.id}\n")
         log.close()
