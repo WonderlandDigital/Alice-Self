@@ -38,6 +38,19 @@ except ImportError:
   os.system("pip install ctypes")
   os.system("pip install re")
   os.system("pip install os")
+  import sys
+  import discord, urllib.parse, urllib.request, functools, discord_webhook
+  import re
+  import string, gtts
+  import aiohttp, colorama
+  import asyncio
+  import json, random, string, datetime, time
+  import tracemalloc
+  import requests
+  import pytest_asyncio
+  import ctypes
+  import re
+  import os
 
 
 sys.path.insert(0, 'discord.py-self')
