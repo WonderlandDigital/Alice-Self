@@ -1569,7 +1569,7 @@ async def gay(ctx, user: discord.Member = None):
     except:
       await ctx.send(endpoint)
   else:
-    avatar = str(user.avatar_url_as(format="png"))
+    avatar = str(user.avatar_url(format="png"))
     endpoint += avatar
     try:
       async with aiohttp.ClientSession() as session:
