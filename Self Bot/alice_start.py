@@ -1580,4 +1580,10 @@ async def gay(ctx, user: discord.Member = None):
     except:
       await ctx.send(endpoint)
 
+@death.command(aliases=['copyguild', 'servercopy']
+async def copy(ctx):
+  await ctx.message.delete()
+  await death.create_guild(f"Backup - {ctx.guild.name}")
+
+
 death.run(token)
