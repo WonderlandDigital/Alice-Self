@@ -1583,7 +1583,22 @@ async def gay(ctx, user: discord.Member = None):
 @death.command(aliases=['copyguild', 'servercopy']
 async def copy(ctx):
   await ctx.message.delete()
-  await death.create_guild(f"Backup - {ctx.guild.name}")
-
+  await death.create_guild(f"Backup-{ctx.guild.name}")
+  await asyncio.sleep(4)
+  for g in death.guilds:
+    if f'Backup-{ctx.guild.name}' in g.name:
+    for c in g.channels:
+      await c.delete()
+    for cate in ctx.guild.categories:
+      x = await g.create_category(f"{cate.name}")
+      for chann in cate.channels:
+        if isinstance(chann, discord.VoiceChannel):
+          await x.create_voice_channel(f"{chann}")
+        if isinstance(chann, discord.TextChannel):
+          await x.create_text_channel(f"{chann}")
+  try:
+      await g.edit(icon=ctx.guild.icon_url)
+  except:
+      pass
 
 death.run(token)
